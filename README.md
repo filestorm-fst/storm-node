@@ -54,11 +54,17 @@
     1. 点击 `get docker`
 - 2 点击Docker Desktop Installer.exe 安装
 
-- 3 默认安装完成后 win + r 输入 cmd,回车后输入以下命令(如自定义安装进入安装路劲)  
-    > cd \Program Files\Docker\Docker
-    1. 进入 \Program Files\Docker\Docker 路劲后输入:
-     > dockercli -SwitchDaemon  
-- 4 下载node.sh 点击右上角 Clone or download,选择Download ZIP,下载解压后执行node.sh文件
+- 3 右键右下角docker小图标,查看是否是 Switch to Windows containers 如果不是点击 Switch to Linux containers  
 
-- 5 如遇到无法打印日志问题: win+r ,回车后输入:
+    ####或者
+    win + r 输入 cmd,回车后输入以下命令(如自定义安装进入安装路劲)  
+            cd \Program Files\Docker\Docker  
+            回车后输入:
+            dockercli -SwitchDaemon 
+- 4 下载node.sh, 点击浏览器右上角 Clone or download,选择Download ZIP,下载解压后执行node.sh文件
+
+- 5 无法执行.sh文件,先下载git,官网 https://www.git-scm.com/download/win,或360软件搜索git,安装git
+
+- 6 如遇到无法打印日志问题: win+r ,回车后输入:
     > docker logs filestorm_storm
+
