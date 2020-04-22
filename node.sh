@@ -24,7 +24,7 @@ else
     echo "==================================pull filestorm_fstorm success"
 fi
 
-docker pull registry.cn-shenzhen.aliyuncs.com/stormchain/storm:v2.0
+docker pull registry.cn-shenzhen.aliyuncs.com/stormchain/storm:v1.0
 
 if [ $? -ne 0 ]; then 
 echo "==================================pull filestorm_mill faild"
