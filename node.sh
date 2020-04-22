@@ -4,7 +4,7 @@ docker rm $(docker ps -aq)
 docker system prune -a -f --volumes
 docker network create --driver bridge --subnet=172.18.12.0/16 --gateway=172.18.1.1 mynet
 if [ $? -ne 0 ]; then 
-    echo $?
+     echo "==================================create network success"
 else
     echo "==================================create network success"
 fi
@@ -47,9 +47,9 @@ fi
  docker run -d --name filestorm_storm --network mynet --ip 172.18.12.3 -p 80:80 registry.cn-shenzhen.aliyuncs.com/stormchain/storm:v1.0
 
 if [ $? -ne 0 ]; then 
-    echo "==================================run filestorm_mill faild"
+    echo "==================================run filestorm_storm faild"
 else
-    echo "==================================run filestorm_mill success"
+    echo "==================================run filestorm_storm success"
 fi
 
 docker logs filestorm_storm
