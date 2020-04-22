@@ -15,7 +15,10 @@
         > chmod 0755 node.sh
      2. 执行node.sh  
         >./node.sh
-     3. 执行成功,启动成功. (如未打印日志,可执行以下命令查看日志)  
+     3. 脚本无法执行,编码格式问题
+        > yum install dos2unix  
+         dos2unix node.sh
+     4. 执行成功,启动成功. (如未打印日志,可执行以下命令查看日志)  
         > docker logs filestorm_storm
 - 3  node.sh运行说明
      1. 停止docker中所有运行容器(可选择弃用)   
