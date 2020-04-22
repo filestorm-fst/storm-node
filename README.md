@@ -59,3 +59,6 @@
     1. 进入 \Program Files\Docker\Docker 路劲后输入:
      > dockercli -SwitchDaemon  
 - 4 下载node.sh 点击右上角 Clone or download,选择Download ZIP,下载解压后执行node.sh文件
+
+- 5 如遇到无法打印日志问题: win+r ,回车后输入:
+    > docker logs filestorm_storm
