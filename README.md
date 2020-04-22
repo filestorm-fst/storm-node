@@ -48,3 +48,13 @@
     > docker logs filestorm_node
 - 7  进入容器
     > docker exec -it filestorm_node /bin/sh
+## windows 下载安装docker
+- 1 官网下载docker
+    > https://hub.docker.com/editions/community/docker-ce-desktop-windows?tab=resources  
+- 2 点击Docker Desktop Installer.exe 安装
+
+- 3 安装完成后 ctrl + r 输入 cmd,输入以下命令  
+    > cd \Program Files\Docker\Docker
+    1. 进入 \Program Files\Docker\Docker 路劲后输入:
+     > dockercli -SwitchDaemon  
+- 4 下载node.sh 点击右上角 Clone or download,选择Download ZIP,下载解压后执行node.sh文件
