@@ -54,7 +54,7 @@
     1. 点击 `get docker`
 - 2 点击Docker Desktop Installer.exe 安装
 
-- 3 安装完成后 win + r 输入 cmd,输入以下命令  
+- 3 默认安装完成后 win + r 输入 cmd,回车后输入以下命令(如自定义安装进入安装路劲)  
     > cd \Program Files\Docker\Docker
     1. 进入 \Program Files\Docker\Docker 路劲后输入:
      > dockercli -SwitchDaemon  
