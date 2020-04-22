@@ -51,6 +51,7 @@
 ## windows 下载安装docker
 - 1 官网下载docker
     > https://hub.docker.com/editions/community/docker-ce-desktop-windows?tab=resources  
+    1. 点击 `get docker`
 - 2 点击Docker Desktop Installer.exe 安装
 
 - 3 安装完成后 ctrl + r 输入 cmd,输入以下命令  
