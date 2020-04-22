@@ -1,4 +1,4 @@
-##filestorm矿软使用教程
+##   filestorm矿软使用教程
 - 1  下载安装docker服务
      1. `卸载旧版本(如果安装的有docker)`
         > sudo yum remove docker  docker-common docker-selinux dockesr-engine  
@@ -33,15 +33,15 @@
      7. 后台运行拉取镜像镜像
 - 4  停止容器运行  
      1. 停止filestorm_node  (同步节点)  
-        > docker stop filestorm_node:v1.0
+        > docker stop filestorm_node
      2. 停止 filestorm_storm(矿软)
-        > docker stop filestorm_storm:v1.0
+        > docker stop filestorm_storm
 - 5  启动已有容器  
      1. 启动filestorm_node  (同步节点)  
-        > docker start filestorm_node:v1.0                                 
+        > docker start filestorm_node                               
      2. 启动filestorm_storm(矿软)
-        > docker start filestorm_storm:v1.0
+        > docker start filestorm_storm
 - 6  查看容器日志
-    > docker logs filestorm_node:v1.0
+    > docker logs filestorm_node
 - 7  进入容器
-    > docker exec -it filestorm_node:v1.0 /bin/sh
+    > docker exec -it filestorm_node /bin/sh
