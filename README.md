@@ -109,3 +109,25 @@
                      }
                      
                      
+- 4 pinAdd
+    > POST http://xxx.xxx.xxx.xxx:80/mill/pinAdd  
+         参数字段:  privateKey  私钥  
+                     &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  hash  文件hash  
+                      
+               返回示例:   
+                 {
+                     "msg": "success",
+                     "code": 0,
+                     "data": "QmUWmHm7qrutvmXi2jeXxUNepNiT58CvM7eocodZTiMWep"
+                 }
+- 5 pinRm
+    > POST http://xxx.xxx.xxx.xxx:80/mill/pinRm  
+         参数字段:  privateKey  私钥  
+                     &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  hash  文件hash  
+                      
+               返回示例:   
+               {
+                   "msg": "success",
+                   "code": 0,
+                   "data": "QmUWmHm7qrutvmXi2jeXxUNepNiT58CvM7eocodZTiMWep"
+               }
