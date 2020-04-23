@@ -1,4 +1,4 @@
-##   filestorm矿软使用教程
+##   filestorm矿软快速入门
 - 1  下载安装docker服务
      1. `卸载旧版本(如果安装的有docker)`
         > sudo yum remove docker  docker-common docker-selinux dockesr-engine  
@@ -68,3 +68,44 @@
 - 6 如遇到无法打印日志问题: win+r ,回车后输入:
     > docker logs filestorm_storm
 
+##   filestorm矿软快速入门--api
+- 1 获取矿软信息
+    > POST    http://xxx.xxx.xxx.xxx:80/mill/getNodeInfo  
+             
+      返回示例:   
+        {
+            "msg": "success",
+            "code": 0,
+            "data": {
+                "privatekey": "xxx",
+                "available_ram": "50G",
+                "address": "xxxx",
+                "nodeId": "0W0VATF9B9EMGD09AMN919UGB7BMV9RWHQR784XER9Q1DUKMFRFYGAWWIRHHGT9WOJXUAA8QQUORZJM2TLGZM1PPPDPU0CVQ5ZQRK7OLB2M875PZJCX97653MDIK1QHM757c942ddcb84706a74492fdb60696351587450409217",
+                "status": "1"
+            }
+        }
+- 2 上传文件
+    > POST    http://xxx.xxx.xx.xxx:80/mill/addFile  
+      参数字段:  privateKey  私钥  
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  multipartFile  上传文件  
+           
+           返回示例:   
+               {
+                   "msg": "success",
+                   "code": 0,
+                   "data": "QmRav7jGxW8j5n1Yiy22qTosHdW2E9rTpirMBx5J5X56g6"
+               }
+               
+ - 3 get
+    > POST  http://xxx.xxx.xxx.xxx:80/mill/get  
+         参数字段:  privateKey  私钥  
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  hash  文件hash  
+                 
+                 返回示例:   
+                 {
+                     "msg": "success",
+                     "code": 0,
+                     "data": "UW1SYXY3akd4VzhqNW4xWWl5MjJxVG9zSGRXMkU5clRwaXJNQng1SjVYNTZnNgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAwMDA2NDQAMDAwMDAwMAAwMDAwMDAwADAwMDAwMDM1MTAxADEzNjUwMjAzNDAyADAxNjczMgAgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1c3RhcgAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwMDAwMDAwADAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/2P/gABBKRklGAAEBAAABAAEAAP/bAEMAAwICAwICAwMDAwQDAwQFCAUFBAQFCgcHBggMCgwMCwoLCw0OEhANDhEOCwsQFhARExQVFRUMDxcYFhQYEhQVFP/bAEMBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIASwA1wMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/"  
+                     }
+                     
+                     
