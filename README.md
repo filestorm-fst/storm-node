@@ -77,11 +77,11 @@
             "msg": "success",
             "code": 0,
             "data": {
-                "privatekey": "xxx",
-                "available_ram": "50G",
-                "address": "xxxx",
-                "nodeId": "0W0VATF9B9EMGD09AMN919UGB7BMV9RWHQR784XER9Q1DUKMFRFYGAWWIRHHGT9WOJXUAA8QQUORZJM2TLGZM1PPPDPU0CVQ5ZQRK7OLB2M875PZJCX97653MDIK1QHM757c942ddcb84706a74492fdb60696351587450409217",
-                "status": "1"
+                "privatekey": "xxx",        // 私钥
+                "available_ram": "50G",     // 可用存储空间
+                "address": "xxxx",  // 地址
+                "nodeId": "0W0VATF9B9EMGD09AMN919UGB7BMV9RWHQR784XER9Q1DUKMFRFYGAWWIRHHGT9WOJXUAA8QQUORZJM2TLGZM1PPPDPU0CVQ5ZQRK7OLB2M875PZJCX97653MDIK1QHM757c942ddcb84706a74492fdb60696351587450409217", //矿机id
+                "status": "1"   // 矿机状态
             }
         }
 - 2 上传文件
@@ -96,7 +96,7 @@
                    "data": "QmRav7jGxW8j5n1Yiy22qTosHdW2E9rTpirMBx5J5X56g6"
                }
                
- - 3 get
+ - 3 下载文件
     > POST  http://xxx.xxx.xxx.xxx:80/mill/get  
          参数字段:  privateKey  私钥  
                 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  hash  文件hash  
@@ -109,7 +109,7 @@
                      }
                      
                      
-- 4 pinAdd
+- 4 固定文件
     > POST http://xxx.xxx.xxx.xxx:80/mill/pinAdd  
          参数字段:  privateKey  私钥  
                      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  hash  文件hash  
@@ -120,7 +120,7 @@
                      "code": 0,
                      "data": "QmUWmHm7qrutvmXi2jeXxUNepNiT58CvM7eocodZTiMWep"
                  }
-- 5 pinRm
+- 5 删除文件
     > POST http://xxx.xxx.xxx.xxx:80/mill/pinRm  
          参数字段:  privateKey  私钥  
                      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  hash  文件hash  
