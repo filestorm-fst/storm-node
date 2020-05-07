@@ -37,7 +37,7 @@ if [ $? -ne 0 ]; then
 else
     echo "==================================run filestorm_fstorm success"
 fi
-docker run -d --name filestorm_node --network mynet --ip 172.18.12.2 -v /root/data:/usr/local/bin/data -p 30715:30715 -p 8545:8545 registry.cn-shenzhen.aliyuncs.com/stormchain/node:v1.0
+docker run -d --name filestorm_node --network mynet --ip 172.18.12.2 -v /root/data:/usr/local/bin/data -p 30333:30333 -p 8647:8647 registry.cn-shenzhen.aliyuncs.com/stormchain/node:v1.0
 if [ $? -ne 0 ]; then
     echo "==================================run filestorm_node faild"
 else
@@ -55,4 +55,4 @@ fi
 docker logs filestorm_storm
 wait
 echo "All is ok"
-exit 0
+exit 0:

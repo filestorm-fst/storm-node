@@ -2,12 +2,17 @@
 - 1  下载安装docker服务
      1. `卸载旧版本(如果安装的有docker)`
         > sudo yum remove docker  docker-common docker-selinux dockesr-engine  
-     2. `安装docker`  
+     2. `安装需要的软件包， yum-util 提供yum-config-manager功能`
+        > sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+     
+     3. `设置yum源`
+        > sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+     4. `安装docker`  
         > sudo yum install docker-ce  
-     3. `启动docker并加入开机启动`
+     5. `启动docker并加入开机启动`
          > sudo systemctl start docker  
            sudo systemctl enable docker  
-     4. `验证是否安装成功(有client和service两部分表示docker安装启动都成功了)`
+     6. `验证是否安装成功(有client和service两部分表示docker安装启动都成功了)`
         > docker version  
        
 - 2  下载node.sh 脚本文件 
